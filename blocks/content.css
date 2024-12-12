@@ -1,0 +1,38 @@
+.content{ 
+    max-width: 1280px;
+
+    gap: 40px 20px;
+    padding: 34px 80px 20px; 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    border-bottom-style: solid;
+  
+}
+content__cards {
+    
+    
+
+
+}
+.content__card{
+    width: 413px;
+    height: 445px;
+   
+    
+    
+}
+
+.content__card_image{
+    width: 413px;
+    height: 413px;
+   border-radius: 5px;
+     
+}
+.content__card_description{
+    margin: 12px 0 0 ;
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: 24px;
+
+}

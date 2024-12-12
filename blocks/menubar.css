@@ -1,0 +1,14 @@
+.menubar { 
+    background-color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+
+   
+}
+.menubar__logo {
+width: 94px;
+height: 26px;
+
+
+}

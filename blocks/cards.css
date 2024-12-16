@@ -1,0 +1,47 @@
+
+  
+  .card {
+    width: 413px;
+    height: 445px;
+   
+  }.cards__list {
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 413px);
+justify-content: center;
+    
+    gap: 40px 20px;
+    margin: 0;
+    border-bottom: 1px #212121 solid;
+    padding:20px 0 40px;
+    list-style-type: none;
+
+  }
+  
+  .card_image {
+    width: 413px;
+    height: 413px;
+    border-radius: 5px;
+    display: block;
+  }
+  .card__content{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0 0;
+
+  }
+  .card__description {
+    margin: 0;
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: 24px;
+    
+  }
+  .card__like-btn{
+    width: 23px;
+    height: 20px;
+    background-image: url(../images/Like\ Icon.svg);
+    border: none;
+    opacity: 40%;
+  }
+  

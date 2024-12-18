@@ -1,4 +1,4 @@
-.banner {
+.header {
   background-color: #fff;
   padding: 10px 0;
   display: flex;
@@ -6,7 +6,7 @@
   
   
 }
-.banner__logo {
+.header__logo {
   width: 94px;
   height: 26px;
  

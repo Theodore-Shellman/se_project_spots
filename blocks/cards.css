@@ -1,11 +1,27 @@
+.cards{
+max-width: 1280px;
+
+border-bottom: 1px #212121 solid;
+
+}
 .cards__list {
-  max-width: 1280px;
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 413px);
   justify-content: center;
   gap: 40px 20px;
   margin: 0;
-  border-bottom: 1px #212121 solid;
-  padding: 20px 0 40px;
+  margin: 20px 0 40px;
+  
+  padding: 0px;
   list-style-type: none;
+}
+@media screen and (max-width: 627px) {
+  .cards__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    gap: 20px;
+  }
 }

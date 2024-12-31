@@ -1,6 +1,7 @@
 .card {
   max-width: 413px;
   min-height: 445px;
+  
 }
 
 .card__image {
@@ -37,13 +38,7 @@
   opacity: 1;
 }
 @media screen and (max-width: 627px) {
-  .cards__list {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-    gap: 20px;
-  }
+  
   .card {
     max-width: 288px;
     min-height: 318px;
@@ -52,8 +47,9 @@
     height: 288px;
     width: 288px;
   }
-  .card__title{
+  .card__description{
     max-width: 250px;
+    font-size: 16px
   }
 
 }

@@ -16,4 +16,5 @@ This website is depolyed to GitHub Pages
   
 This project had a vision for fully customizable user profile page, with the added feature of uploading and liking photos.
   
-
+**Video**
+https://drive.google.com/file/d/1JfT75ua7tUA6D6HT42f-Zu5Tb-h0f4PE/view?usp=drive_link

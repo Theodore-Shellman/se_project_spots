@@ -1,8 +1,6 @@
-.cards{
-max-width: 1280px;
-
-border-bottom: 1px #21212166 solid;
-
+.cards {
+  max-width: 1280px;
+  border-bottom: 1px #21212166 solid;
 }
 .cards__list {
   max-width: 100%;
@@ -10,10 +8,7 @@ border-bottom: 1px #21212166 solid;
   grid-template-columns: repeat(auto-fill, 413px);
   justify-content: center;
   gap: 40px 20px;
-  margin: 0;
-  margin: 20px 0 40px;
-  
-  padding: 0px;
+  padding: 20px 0 40px;
   list-style-type: none;
 }
 @media screen and (max-width: 627px) {
@@ -23,5 +18,9 @@ border-bottom: 1px #21212166 solid;
     margin: 0;
     align-items: center;
     gap: 20px;
+   
   }
+  
 }
+
+

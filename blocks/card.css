@@ -46,6 +46,7 @@
   .card__image {
     height: 288px;
     width: 288px;
+    padding-top: 20px;
   }
   .card__description{
     max-width: 250px;

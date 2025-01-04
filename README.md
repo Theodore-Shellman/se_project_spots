@@ -4,6 +4,7 @@
 
 * HTML & CSS 
 * Figma  
+* JavaScript 
 * Responsive Design  
 
 ### Depolyment 

@@ -15,7 +15,7 @@ This website is depolyed to GitHub Pages
   
 **Description**
   
-This project had a vision for fully customizable user profile page, with the added feature of uploading and liking photos.
+This project had a vision for fully customizable user profile page, with the added feature of uploading and liking photos. added a pop screen for the edit profile button. 
   
 **Video**
 https://drive.google.com/file/d/1JfT75ua7tUA6D6HT42f-Zu5Tb-h0f4PE/view?usp=drive_link

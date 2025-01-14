@@ -46,12 +46,11 @@ function getCardElement(data) {
     .querySelector(".card")
     .cloneNode(true);
 
-const cardNameEl = cardElement.querySelector(".card__description");
-const cardImageEl = cardElement.querySelector(".card__image");
+  const cardNameEl = cardElement.querySelector(".card__description");
+  const cardImageEl = cardElement.querySelector(".card__image");
 
-
-cardNameEl.textContent = data.name;
-cardImageEl.src = data.link;
+  cardNameEl.textContent = data.name;
+  cardImageEl.src = data.link;
 
   return cardElement;
 }
@@ -59,10 +58,10 @@ cardImageEl.src = data.link;
 function openModal() {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  editProfileModal.classList.add("modal__opened");
+  editProfileModal.classList.add("modal_opened");
 }
 function closeModal() {
-  editProfileModal.classList.remove("modal__opened");
+  editProfileModal.classList.remove("modal_opened");
 }
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
@@ -76,6 +75,6 @@ closeProfilemodal.addEventListener("click", closeModal);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 
 for (let i = 0; i < initalCards.length; i++) {
-const cardElement = getCardElement(initalCards[i]);
-cardsList.prepend(cardElement);
+  const cardElement = getCardElement(initalCards[i]);
+  cardsList.prepend(cardElement);
 }

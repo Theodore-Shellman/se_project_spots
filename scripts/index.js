@@ -56,10 +56,10 @@ function getCardElement(data) {
   return cardElement;
 }
 
-function openModal() {
+function openModal(modal) {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  editProfileModal.classList.add("modal_opened");
+  modal.classList.add("modal_opened");
 }
 function closeModal() {
   editProfileModal.classList.remove("modal_opened");
@@ -71,7 +71,7 @@ function handleEditFormSubmit(evt) {
   closeModal();
 }
 
-profileEditButton.addEventListener("click", openModal);
+profileEditButton.addEventListener("click", () => { openModal(editProfileModal)});
 closeProfilemodal.addEventListener("click", closeModal);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 

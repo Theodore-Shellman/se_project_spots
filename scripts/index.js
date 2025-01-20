@@ -57,28 +57,29 @@ function getCardElement(data) {
 }
 
 function openModal(modal) {
-  editModalNameInput.value = profileName.textContent;
-  editModalDescriptionInput.value = profileDescription.textContent;
   modal.classList.add("modal_opened");
 }
-function closeModal() {
-  editProfileModal.classList.remove("modal_opened");
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
 }
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  closeModal();
+  closeModal(editProfileModal);
 }
 
-profileEditButton.addEventListener("click", () => { openModal(editProfileModal)});
-closeProfilemodal.addEventListener("click", closeModal);
+profileEditButton.addEventListener("click", () => {
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
+  openModal(editProfileModal);
+});
+closeProfilemodal.addEventListener("click", () => {
+  closeModal(editProfileModal);
+});
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 
-
-
-
- initalCards.forEach((item) => {
+initalCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
 });

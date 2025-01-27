@@ -87,6 +87,36 @@
   color: white;
   border: none;
 }
+.modal__content {
+  background-color: #fff;
+  padding: 32px 50px;
+  max-width: 730px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 8px;
+}
+.modal__caption {
+  font-family: Poppins, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  top: 8px;
+  border-radius: 8px;
+  background-color: #212121;
+}
+.modal__image {
+  width: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+}
 
 @media screen and (max-width: 627px) {
   .modal {

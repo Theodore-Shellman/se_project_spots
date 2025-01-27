@@ -1,6 +1,7 @@
 .card {
   max-width: 413px;
   min-height: 445px;
+  position: relative;
   
 }
 
@@ -46,6 +47,25 @@ opacity: 1;
   background-image: url(../images/liked-hover.svg);
 
 }
+.card__trash-button {
+  background: transparent url(../images/trash-btn.svg) center no-repeat;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  transition: 0.8s;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  
+}
+
+.card__trash-button:hover {
+  background: transparent url(../images/trash-btn-hovered.svg) center no-repeat;
+  opacity: 0.5;
+}
+
 
 
 @media screen and (max-width: 627px) {

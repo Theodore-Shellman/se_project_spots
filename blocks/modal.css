@@ -42,6 +42,17 @@
 .modal__close-btn:hover {
   opacity: 1;
   cursor: pointer;
+
+}
+.modal__close-btn_type_preview {
+  background-image: url(../images/close-btn__preveiw.svg);
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  top: -0px;
+  right: -60px;
+  opacity: 1;
+  position: absolute;
 }
 .modal__title {
   margin: 0 0 32px;
@@ -96,6 +107,11 @@
   position: relative;
   border-radius: 8px;
 }
+.modal__content_type_preview {
+  padding: 0;
+  position: relative;
+  background-color: transparent;
+}
 .modal__caption {
   font-family: Poppins, Helvetica, sans-serif;
   font-weight: 500;
@@ -114,9 +130,12 @@
   max-width: 80vw;
   max-height: 80vh;
   border-radius: 8px;
+  object-fit: cover;
   padding: 0;
   margin: 0;
 }
+
+
 
 @media screen and (max-width: 627px) {
   .modal {

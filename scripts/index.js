@@ -63,21 +63,20 @@ function getCardElement(data) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
   const trashButton = cardElement.querySelector(".card__trash-button");
-  
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
-   cardLikeBtn.addEventListener("click", () => {
+  cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-btn_liked");
-   });
+  });
 
-   trashButton.addEventListener('click', () => {
+  trashButton.addEventListener("click", () => {
     cardElement.remove();
   });
 
-  cardImageEl.addEventListener('click', () => {
+  cardImageEl.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
     previewModalCaptionEl.textContent = data.name;
@@ -88,7 +87,6 @@ function getCardElement(data) {
 }
 previewModalClose.addEventListener("click", () => {
   closeModal(previewModal);
- 
 });
 
 function openModal(modal) {
@@ -114,6 +112,7 @@ function handleCardFormSubmit(evt) {
   cardsList.prepend(cardElement);
 
   closeModal(cardModal);
+  evt.target.reset();
 }
 
 profileEditBtn.addEventListener("click", () => {

@@ -43,7 +43,7 @@ const editModalDescriptionInput = editProfileModal.querySelector(
 const cardModal = document.querySelector("#add-card-modal");
 const cardFormElement = cardModal.querySelector(".modal__form");
 const closeCardModal = cardModal.querySelector(".modal__close-btn");
-const cardNameInput = cardModal.querySelector("#add-card-link-input");
+const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 
 const previewModal = document.querySelector("#preview-modal");

@@ -11,11 +11,16 @@
   justify-content: center;
   visibility: hidden;
   padding: 0 16px;
-  transition: visibility 0.3s, opacity 0.3s ease-in;
+  opacity:0;
+  
+  
 }
 
 .modal_opened {
   visibility: visible;
+  transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  opacity:1;
+
 }
 
 .modal__container {
@@ -145,7 +150,7 @@
     max-width: 300px;
   }
   .modal__close-btn {
-    top: -45px;
+    top: 20px;
     right: 1px;
 
   }

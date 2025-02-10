@@ -149,9 +149,14 @@
     max-width: 300px;
   }
   .modal__close-btn {
-    top: -40px;
+    top: 10px;
     right: 1px;
 
+  }
+  .modal__close-btn_type_preview {
+   top: -40px;
+  
+    opacity: 1;
   }
   .modal__title {
     font-size: 20px;
@@ -191,16 +196,6 @@
 
   .modal__content_type_preview {
     padding: 0;
-  }
-
-  .modal__close-button_type_preview {
-    background-image: url(../images/modal_close.png);
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 60px;
-    
-    opacity: 1;
   }
 
   .modal__close-button_type_preview:hover {

@@ -1,13 +1,17 @@
 const showInputError = (formEl, inputEl, errorMsg) => {
     const errorMsgID = inputEl.id + "-error";
-    const errorMsgEl = document.querySelector("#" + errorMsgID)
+    const errorMsgEl = formEl.querySelector("#" + errorMsgID)
     errorMsgEl.textContent = errorMsg
     
     // inputElement.classList.add("form__input_type_error");
     // errorElement.textContent = errorMessage;
     // errorElement.classList.add("form__input-error_active");
   };
-  
+  const hideInputError = (formEl, inputEl) => {
+    const errorMsgID = inputEl.id + "-error";
+    const errorMsgEl = formEl.querySelector("#" + errorMsgID)
+    errorMsgEl.textContent = "";
+  }
 //   const hideInputError = (formElement, inputElement) => {
 //     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
 //     inputElement.classList.remove("form__input_type_error");
@@ -18,8 +22,8 @@ const showInputError = (formEl, inputEl, errorMsg) => {
 const checkInputValidity = (formEl, inputEl) => {
     if (!inputEl.validity.valid) {
       showInputError(formEl, inputEl, inputEl.validationMessage);
-    // } else {
-    //   hideInputError(formEl, inputEl);
+    } else {
+      hideInputError(formEl, inputEl);
     }
   };
 

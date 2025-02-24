@@ -69,8 +69,8 @@ function getCardElement(data) {
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
-  cardLikeBtn.addEventListener("click", (config) => {
-    cardLikeBtn.classList.toggle(config.cardLikeBtnLiked);
+  cardLikeBtn.addEventListener("click", (evt) => {
+    evt.target.classList.toggle("card__like-btn_liked");
   });
 
   trashButton.addEventListener("click", () => {
@@ -90,11 +90,11 @@ previewModalClose.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
-function openModal(modal, config) {
-  modal.classList.add(config.modalOpen);
+function openModal(modal) {
+  modal.classList.add("modal_opened");
 }
-function closeModal(modal, config) {
-  modal.classList.remove(config.modalOpen);
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
 }
 function handleEditFormSubmit(evt) {
   evt.preventDefault();

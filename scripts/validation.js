@@ -5,16 +5,15 @@ const settings = {
   inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error",
-  modalOpen: "modal_opened",
-  cardLikeBtnLiked: "card__like-btn_liked",
-}
+  
+};
 
 const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgID = inputEl.id + "-error";
   const errorMsgEl = formEl.querySelector("#" + errorMsgID);
   errorMsgEl.textContent = errorMsg;
   inputEl.classList.add(config.inputErrorClass);
-}
+};
 
 const hideInputError = (formEl, inputEl, config) => {
   const errorMsgID = inputEl.id + "-error";
@@ -52,9 +51,9 @@ const disableButton = (buttonEl, config) => {
 };
 const resetValidation = (formEl, inputList) => {
   inputList.forEach((input) => {
-    hideInputError(formEl, input);
+    hideInputError(formEl, input, config);
   });
-}
+};
 
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));

@@ -90,12 +90,10 @@ previewModalClose.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
-// function overlayClick(modal){
-// const overlay = document.querySelector('modal');
-
-// overlay.addEventListener('click', () => {
-//   overlay.classList.remove = 'modal_opened'; 
-// })};
+function overlayClick(modal){
+modal.addEventListener('click', () => {
+  modal.classList.remove('modal_opened'); 
+})};
 
 function escapeKey(modal) {
   document.addEventListener("keyup", (event) => {
@@ -108,7 +106,7 @@ function escapeKey(modal) {
 }
 function openModal(modal) {
   escapeKey(modal);
-  // overlayClick(modal);
+  overlayClick(modal);
   modal.classList.add("modal_opened");
 }
 function closeModal(modal) {
@@ -137,7 +135,7 @@ function handleCardFormSubmit(evt) {
 profileEditBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  // resetValidation(editFormElement, [cardNameInput, cardLinkInput]);
+  resetValidation(editFormElement, [cardNameInput, cardLinkInput]);
   openModal(editProfileModal);
 });
 closeProfileModal.addEventListener("click", () => {

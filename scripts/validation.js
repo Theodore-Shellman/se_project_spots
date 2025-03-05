@@ -9,15 +9,15 @@ const settings = {
 };
 
 const showInputError = (formEl, inputEl, errorMsg, config) => {
-  const errorMsgID = inputEl.id + "-error";
-  const errorMsgEl = formEl.querySelector("#" + errorMsgID);
+  const errorMsgID = `#${inputEl.id}-error`;
+  const errorMsgEl = formEl.querySelector(errorMsgID);
   errorMsgEl.textContent = errorMsg;
   inputEl.classList.add(config.inputErrorClass);
 };
 
 const hideInputError = (formEl, inputEl, config) => {
-  const errorMsgID = inputEl.id + "-error";
-  const errorMsgEl = formEl.querySelector("#" + errorMsgID);
+  const errorMsgID = `#${inputEl.id}-error`;
+  const errorMsgEl = formEl.querySelector(errorMsgID);
   errorMsgEl.textContent = "";
   inputEl.classList.remove(config.inputErrorClass);
 };
@@ -51,7 +51,7 @@ const disableButton = (buttonEl, config) => {
 };
 const resetValidation = (formEl, inputList) => {
   inputList.forEach((input) => {
-    hideInputError(formEl, input, config);
+    hideInputError(formEl, input);
   });
 };
 

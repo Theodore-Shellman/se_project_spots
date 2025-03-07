@@ -99,11 +99,11 @@ function closeEscapeKey() {
 
 
 function closeEscapeKeyListener(closeEscapeKey) {
-  document.addEventListener("keyup", (add) );
+  document.addEventListener("keyup", (closeEscapeKey) );
   
 }
 function openModal(modal) {
-  escapeKey(modal);
+  closeEscapeKey(modal);
   modal.classList.add("modal_opened");
 }
 function closeModal(modal) {
@@ -133,13 +133,14 @@ function handleCardFormSubmit(evt) {
 profileEditBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(formEl, inputList, config)
+
+  resetValidation(editFormElement, [editModalNameInput, editModalDescriptionInput], settings)
   openModal(editProfileModal);
 });
 
 
 cardAddBtn.addEventListener("click", () => {
-  resetValidation(formEl, inputList, config)
+  resetValidation(cardFormElement, [cardNameInput, cardLinkInput], settings)
   openModal(cardModal);
 
 });

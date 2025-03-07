@@ -89,15 +89,18 @@ function getCardElement(data) {
   return cardElement;
 }
 
-
-function escapeKey(modal) {
-  document.addEventListener("keyup", (event) => {
+function closeEscapeKey() {
     
-    if (event.key === "Escape") {
-      const escapeModal = document.querySelector(".modal_opened");
-      modal.classList.remove("modal_opened")
-    }
-  });
+  if (event.key === "Escape") {
+    const escapeModal = document.querySelector(".modal_opened");
+   closeModal
+  }
+};
+
+
+function closeEscapeKeyListener(closeEscapeKey) {
+  document.addEventListener("keyup", (add) );
+  
 }
 function openModal(modal) {
   escapeKey(modal);
@@ -105,6 +108,7 @@ function openModal(modal) {
 }
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+
 }
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
@@ -129,12 +133,15 @@ function handleCardFormSubmit(evt) {
 profileEditBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(formEl, inputList, config)
   openModal(editProfileModal);
 });
 
 
 cardAddBtn.addEventListener("click", () => {
+  resetValidation(formEl, inputList, config)
   openModal(cardModal);
+
 });
 
 

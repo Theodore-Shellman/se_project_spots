@@ -90,13 +90,13 @@ function getCardElement(data) {
 }
 
 function openModal(modal) {
-  closeEscapeKey(modal);
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", closeEscapeKey);
  
 }
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeEscapeKey); 
 }
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
@@ -140,7 +140,6 @@ profileEditBtn.addEventListener("click", () => {
 });
 
 cardAddBtn.addEventListener("click", () => {
-  resetValidation(cardFormElement, [cardNameInput, cardLinkInput], settings);
   openModal(cardModal);
 });
 

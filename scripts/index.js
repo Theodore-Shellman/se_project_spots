@@ -89,17 +89,14 @@ function getCardElement(data) {
   return cardElement;
 }
 
-
-
-
-
 function openModal(modal) {
   closeEscapeKey(modal);
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", closeEscapeKey);
+ 
 }
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-
 }
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
@@ -108,14 +105,14 @@ function handleEditFormSubmit(evt) {
   closeModal(editProfileModal);
 }
 
-
-function closeEscapeKey() {
-    
-  if (event.key === "Escape") {
-    const escapeModal = document.querySelector(".modal_opened");
-   closeModal(escapeModal);
+function closeEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
   }
-};
+}
 
 function handleCardFormSubmit(evt) {
   evt.preventDefault();
@@ -134,17 +131,18 @@ profileEditBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
 
-  resetValidation(editFormElement, [editModalNameInput, editModalDescriptionInput], settings)
+  resetValidation(
+    editFormElement,
+    [editModalNameInput, editModalDescriptionInput],
+    settings
+  );
   openModal(editProfileModal);
 });
 
-
 cardAddBtn.addEventListener("click", () => {
-  resetValidation(cardFormElement, [cardNameInput, cardLinkInput], settings)
+  resetValidation(cardFormElement, [cardNameInput, cardLinkInput], settings);
   openModal(cardModal);
-
 });
-
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardFormElement.addEventListener("submit", handleCardFormSubmit);
@@ -155,8 +153,11 @@ initalCards.forEach((item) => {
 
 modals.forEach((modal) => {
   modal.addEventListener("click", (evt) => {
-    if(evt.target.classList.contains("modal_opened") || evt.target.classList.contains("modal__close-btn")) {
-      closeModal(modal)
+    if (
+      evt.target.classList.contains("modal_opened") ||
+      evt.target.classList.contains("modal__close-btn")
+    ) {
+      closeModal(modal);
     }
-  })
-})
+  });
+});

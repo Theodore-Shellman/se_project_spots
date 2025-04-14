@@ -1,3 +1,10 @@
+import "./index.css";
+import {
+  enableValiadation,
+  settings,
+  resetValidation,
+} from "../scripts/validation.js";
+
 const initalCards = [
   {
     name: "Val Thorens",
@@ -92,18 +99,17 @@ function getCardElement(data) {
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", closeEscapeKey);
- 
 }
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", closeEscapeKey); 
+  document.removeEventListener("keydown", closeEscapeKey);
 }
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
   closeModal(editProfileModal);
-} 
+}
 // tes
 
 function closeEscapeKey(evt) {
@@ -161,3 +167,4 @@ modals.forEach((modal) => {
     }
   });
 });
+enableValiadation(settings);

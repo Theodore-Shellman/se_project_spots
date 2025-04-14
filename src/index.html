@@ -7,7 +7,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Theodore Shellman" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./pages/index.css" />
+
     <title>Spots</title>
   </head>
   <body>
@@ -74,7 +74,8 @@
                 minlength="2"
                 maxlength="40"
                 required
-              /> <span id="profile-name-input-error" class="modal__error"></span>
+              />
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label"
               >Description
@@ -86,7 +87,11 @@
                 minlength="2"
                 maxlength="200"
                 required
-              /> <span id="profile-description-input-error" class="modal__error"></span>
+              />
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -106,7 +111,8 @@
                 class="modal__input"
                 placeholder="Paste the link in the picture"
                 required
-              /> <span id="add-card-link-input-error" class="modal__error"></span>
+              />
+              <span id="add-card-link-input-error" class="modal__error"></span>
             </label>
             <label for="add-card-name-input" class="modal__label"
               >Caption
@@ -118,28 +124,23 @@
                 minlength="2"
                 maxlength="30"
                 required
-              /> <span id="add-card-name-input-error" class="modal__error"></span>
+              />
+              <span id="add-card-name-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
     </div>
-    <div class="modal " id="preview-modal">
+    <div class="modal" id="preview-modal">
       <div class="modal__content modal__content_type_preview">
         <button
           class="modal__close-btn modal__close-btn_type_preview"
           type="button"
         ></button>
-        <img
-          class="modal__image"
-          src=""
-          alt=""
-        />
+        <img class="modal__image" src="" alt="" />
         <p class="modal__caption"></p>
       </div>
     </div>
-    <script defer src="./scripts/validation.js"></script>
-    <script defer src="./scripts/index.js"></script>
   </body>
 </html>

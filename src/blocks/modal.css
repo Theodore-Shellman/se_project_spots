@@ -220,7 +220,7 @@
   }
 
   .modal__close-button_type_preview:hover {
-    background-image: url(../images/modal_close-hover.png);
+    background-image: url(../images/close-btn.svg);
     cursor: pointer;
     transition: cursor 2s;
     opacity: 0.4;
